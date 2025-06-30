@@ -141,3 +141,28 @@
   max-width: 90%;
   height: auto;
 }
+
+/* Reduce nav logo and spacing on small screens */
+@media (max-width: 768px) {
+  #desktop-nav .logo {
+    font-size: 1rem; /* or even 0.9rem if needed */
+    max-width: 60vw;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  #desktop-nav .nav-links {
+    gap: 0.5rem; /* reduce spacing between links */
+    font-size: 0.9rem;
+  }
+
+  #dark-mode-toggle i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .theme-btn {
+    padding: 0.3rem;
+  }
+}
