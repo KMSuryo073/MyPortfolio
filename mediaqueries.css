@@ -142,10 +142,9 @@
   height: auto;
 }
 
-/* Reduce nav logo and spacing on small screens */
 @media (max-width: 768px) {
   #desktop-nav .logo {
-    font-size: 1rem; /* or even 0.9rem if needed */
+    font-size: 1rem;
     max-width: 60vw;
     white-space: nowrap;
     overflow: hidden;
@@ -153,7 +152,7 @@
   }
 
   #desktop-nav .nav-links {
-    gap: 0.5rem; /* reduce spacing between links */
+    gap: 0.5rem;
     font-size: 0.9rem;
   }
 
