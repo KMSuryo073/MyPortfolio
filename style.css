@@ -838,3 +838,41 @@ nav {
   margin: 0 auto;
   word-break: break-word;
 }
+
+#hamburger-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.hamburger-left .logo {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.hamburger-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+#hamburger-nav .theme-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hamburger-nav .theme-btn i {
+  width: 24px;
+  height: 24px;
+}
