@@ -793,3 +793,48 @@ body.dark-mode .theme-btn svg {
   font-size: 1rem;
   cursor: pointer;
 }
+
+body {
+  padding-top: 80px; /* prevent content under fixed navbar */
+}
+
+nav {
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  z-index: 999;
+  padding: 1rem 2rem;
+}
+
+.nav-links {
+  flex-wrap: wrap; /* allow wrapping */
+  justify-content: center; /* keep items centered on small screens */
+}
+
+.theme-toggle {
+  margin-left: auto; /* Push the toggle button to the right */
+}
+
+.theme-toggle button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.5rem;
+}
+
+.project-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 1rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.project-title {
+  font-size: 1.25rem;
+  max-width: 90%;
+  margin: 0 auto;
+  word-break: break-word;
+}
