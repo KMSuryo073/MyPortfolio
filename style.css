@@ -399,11 +399,6 @@ section {
 .project-title {
   margin: 1rem;
   color: black;
-  font-size: 1.2rem;
-  text-align: center;
-  padding: 0 1rem;
-  word-wrap: break-word;
-  max-width: 90%;
 }
 
 .project-btn {
@@ -425,12 +420,9 @@ section {
 }
 
 .project-slide {
+  min-width: 100%;
   box-sizing: border-box;
   text-align: center;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .carousel-btn {
