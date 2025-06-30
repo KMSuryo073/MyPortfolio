@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Kresnandityo Mahesa Suryo</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li class="theme-toggle">
+            <button id="dark-mode-toggle" class="theme-btn">
+              <i data-lucide="moon"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Kresnandityo Mahesa Suryo</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <section id="profile">
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Kresnandityo Mahesa Suryo</h1>
+        <p class="section__text__p2">AI Enthusiast | Software Developer | Explorer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/resume-example.pdf')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/kresnandityoms'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+    <br/>
+    <section id="about">
+      <br/>
+      <br/>
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="text-container">
+            <p>
+              An undergraduate with various interest and ambitions. Eager in
+              personal development, computer science, and artificial intelligence. 
+              Known for willingness in learning new things and great adaptability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="experience">
+      <br/>
+      <br/>
+      <br/>
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-image-container">
+        <img src="./assets/html-logo.png" alt="HTML Logo" class="experience-image" />
+        <img src="./assets/css-logo.png" alt="CSS Logo" class="experience-image" />
+        <img src="./assets/js-logo.png" alt="JavaScript Logo" class="experience-image" />
+        <img src="./assets/java-logo.png" alt="Java Logo" class="experience-image" />
+        <img src="./assets/python-logo.png" alt="Python Logo" class="experience-image" />
+        <img src="./assets/as-logo.png" alt="Android Studio Logo" class="experience-image" />
+        <img src="./assets/sql-logo.png" alt="SQL Logo" class="experience-image" />
+        <img src="./assets/opencv-logo.png" alt="OpenCV Logo" class="experience-image" />
+        <img src="./assets/gcolab-logo.png" alt="Google Colab Logo" class="experience-image" />
+      </div>
+    </section>
+    <section id="projects">
+      <br/>
+      <br/>
+      <br/>
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <section id="projects">
+      <div class="carousel-container">
+        <button class="carousel-btn left" onclick="moveSlide(-1)">❮</button>
+        <div class="carousel-track">
+          <div class="project-slide">
+            <img src="./assets/project-1.png" alt="Project 1" class="project-img" />
+            <h2 class="project-title">AI Based Group Attendance Management</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+          <div class="project-slide">
+            <img src="./assets/project-2.png" alt="Project 2" class="project-img" />
+            <h2 class="project-title">Costumer Behaviour Analysis using Machine Learning</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+          <div class="project-slide">
+            <img src="./assets/project-3.png" alt="Project 3" class="project-img" />
+            <h2 class="project-title">Interactive AI bot using Python</h2>
+            <div class="btn-container">
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Github</button>
+              <button class="btn btn-color-2" onclick="location.href='https://github.com/'">Live Demo</button>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-btn right" onclick="moveSlide(1)">❯</button>
+      </div>
+    </section>
+    </section>
+    <section id="contact">
+      <br/>
+      <br/>
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-icon-grid">
+        <a href="#" class="icon-label"><i data-lucide="home"></i><span>Home</span></a>
+        <a href="https://github.com/KMSuryo073" class="icon-label" target="_blank"><i data-lucide="github"></i><span>GitHub</span></a>
+        <a href="https://linkedin.com/kresnandityoms" class="icon-label" target="_blank"><i data-lucide="linkedin"></i><span>LinkedIn</span></a>
+        <a href="mailto:examplemail@gmail.com" class="icon-label"><i data-lucide="mail"></i><span>Email</span></a>
+      </div>
+      <div class="contact-icon-grid">
+        <a href="https://kmsuryo73.taplink.id" class="icon-label"><i data-lucide="user"></i><span>Other Contacts</span></a>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <!-- Chat Toggle Button -->
+    <button id="chat-toggle"></button>
+
+    <!-- Chatbot Window -->
+    <div id="chat-container">
+      <div id="chat-header">
+        <span>Ask Me Anything</span>
+        <button id="chat-close">✖</button>
+      </div>
+      <div id="chat-log"></div>
+      <div id="chat-input-area">
+        <input type="text" id="chat-input" placeholder="Hello..." />
+        <button id="send-btn">➤</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script>lucide.createIcons();</script>
+
+  </body>
+</html>
