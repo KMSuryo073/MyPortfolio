@@ -126,3 +126,18 @@
   }
 }
 
+.carousel-container {
+  overflow-x: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+}
+
+.project-img {
+  max-width: 90%;
+  height: auto;
+}
