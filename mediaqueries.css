@@ -128,3 +128,14 @@
     padding: 1rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .logo.small-logo {
+    font-size: 1rem;
+    font-weight: 500;
+  }
+
+  .menu-links a {
+    font-size: 1.25rem;
+  }
+}
