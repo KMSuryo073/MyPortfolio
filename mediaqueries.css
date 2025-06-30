@@ -107,3 +107,24 @@
     grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
   }
 }
+
+@media (max-width: 768px) {
+  .project-title {
+    font-size: 1rem;
+  }
+
+  .carousel-track {
+    gap: 1rem;
+  }
+
+  .project-img {
+    width: 70%; /* reduce size for small screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .project-slide {
+    min-width: 100%;
+    padding: 1rem;
+  }
+}
