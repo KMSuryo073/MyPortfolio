@@ -8,16 +8,21 @@ function toggleMenu() {
 const toggle = document.getElementById("dark-mode-toggle");
 
 toggle.addEventListener("click", () => {
+  // Toggle dark mode on body
   const isDark = document.body.classList.toggle("dark-mode");
 
+  // Save theme preference
   localStorage.setItem("theme", isDark ? "dark" : "light");
 
+  // Remove existing icon (either <svg> or <i>)
   toggle.innerHTML = "";
 
+  // Create new <i> element with appropriate icon
   const newIcon = document.createElement("i");
   newIcon.setAttribute("data-lucide", isDark ? "sun" : "moon");
   toggle.appendChild(newIcon);
 
+  // Render Lucide icon
   lucide.createIcons();
 });
 
@@ -29,6 +34,7 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark-mode");
   }
 
+  // Ensure toggle button starts with the correct icon
   toggle.innerHTML = "";
   const initialIcon = document.createElement("i");
   initialIcon.setAttribute("data-lucide", isDark ? "sun" : "moon");
@@ -76,15 +82,15 @@ function getAIResponse(input) {
   }
 
   // Skills
-  if (input.includes("skills") || input.includes("technologies") || input.includes("skill") || input.includes("good at")) {
+  if (input.includes("skills") || input.includes("technologies") || input.includes("skill")) {
     return "I have experience with Web and Software developing as well as AI engineering and more!";
   }
   if (input.includes("programming languages") || input.includes("coding languages")) {
-    return "I'm familiar with various programming language with Java and Python as my mainly studied programming language.";
+    return "I'm familiar with Java, JavaScript, Python, and some SQL.";
   }
 
   // Education
-  if (input.includes("education") || input.includes("study") || input.includes("major")) {
+  if (input.includes("education") || input.includes("study")) {
     return "I'm currently pursuing my studies in Informatics with a concentration in Artificial Intelligence at President University.";
   }
   if (input.includes("university")) {
@@ -93,7 +99,7 @@ function getAIResponse(input) {
 
   // Projects
   if (input.includes("projects") || input.includes("portfolio") || input.includes("project")) {
-    return "You can explore my projects in the Projects section. I’ve worked on things like Face Recognition Attendance Systems and other AI related projects.";
+    return "You can explore my projects in the Projects section. I’ve worked on things like Face Recognition Attendance Systems and interactive websites.";
   }
   if (input.includes("face recognition") || input.includes("attendance system")) {
     return "Yes! I built a facial recognition-based attendance system for PT Mattel Indonesia as part of my project.";
@@ -101,7 +107,7 @@ function getAIResponse(input) {
 
   // Experience
   if (input.includes("experience") || input.includes("work")) {
-    return "Currently, I don't have any work experience and I'm building my professional experience through projects, collaborations, and continuously learning new technologies.";
+    return "I'm building my professional experience through projects, collaborations, and continuously learning new technologies.";
   }
 
   // Contact & Collaboration
@@ -159,11 +165,6 @@ toggleBtn.addEventListener("click", () => {
 
   if (chatBox.classList.contains("active")) {
     chatBox.classList.remove("hidden");
-
-    if (wasHidden && chatLog.children.length === 0) {
-      appendMessage("bot", "Hi there! 👋 I'm Kresna's assistant. You can ask me about his skills, projects, or education!");
-    }
-    
   } else {
     chatBox.classList.add("hidden");
   }
@@ -222,4 +223,39 @@ window.addEventListener("DOMContentLoaded", () => {
 document.addEventListener("keydown", (e) => {
   if (e.key === "ArrowLeft") moveSlide(-1);
   if (e.key === "ArrowRight") moveSlide(1);
+});
+
+// FLOATING LIGHTS ANIMATION
+function getRandomOffset() {
+  const x = Math.random() * 200 - 100; // -100vw to +100vw
+  const y = Math.random() * 200 - 100; // -100vh to +100vh
+  return `translate(${x}vw, ${y}vh)`;
+}
+
+function animateLight(light) {
+  const keyframes = [
+    { transform: "translate(0, 0)" },
+    { transform: getRandomOffset() },
+    { transform: getRandomOffset() },
+    { transform: getRandomOffset() },
+    { transform: "translate(0, 0)" }
+  ];
+
+  const options = {
+    duration: 20000,
+    iterations: Infinity,
+    easing: "ease-in-out"
+  };
+
+  light.animate(keyframes, options);
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+  const light1 = document.getElementById("light1");
+  const light2 = document.getElementById("light2");
+
+  if (light1 && light2) {
+    animateLight(light1);
+    animateLight(light2);
+  }
 });
