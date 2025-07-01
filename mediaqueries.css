@@ -155,3 +155,10 @@
     height: 2px;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .logo.small-logo {
+    font-size: 0.95rem;
+    white-space: nowrap;
+  }
+}
