@@ -76,15 +76,15 @@ function getAIResponse(input) {
   }
 
   // Skills
-  if (input.includes("skills") || input.includes("technologies") || input.includes("skill")) {
+  if (input.includes("skills") || input.includes("technologies") || input.includes("skill") || input.includes("good at")) {
     return "I have experience with Web and Software developing as well as AI engineering and more!";
   }
   if (input.includes("programming languages") || input.includes("coding languages")) {
-    return "I'm familiar with Java, JavaScript, Python, and some SQL.";
+    return "I'm familiar with various programming language with Java and Python as my mainly studied programming language.";
   }
 
   // Education
-  if (input.includes("education") || input.includes("study")) {
+  if (input.includes("education") || input.includes("study") || input.includes("major")) {
     return "I'm currently pursuing my studies in Informatics with a concentration in Artificial Intelligence at President University.";
   }
   if (input.includes("university")) {
@@ -93,7 +93,7 @@ function getAIResponse(input) {
 
   // Projects
   if (input.includes("projects") || input.includes("portfolio") || input.includes("project")) {
-    return "You can explore my projects in the Projects section. I’ve worked on things like Face Recognition Attendance Systems and interactive websites.";
+    return "You can explore my projects in the Projects section. I’ve worked on things like Face Recognition Attendance Systems and other AI related projects.";
   }
   if (input.includes("face recognition") || input.includes("attendance system")) {
     return "Yes! I built a facial recognition-based attendance system for PT Mattel Indonesia as part of my project.";
@@ -101,7 +101,7 @@ function getAIResponse(input) {
 
   // Experience
   if (input.includes("experience") || input.includes("work")) {
-    return "I'm building my professional experience through projects, collaborations, and continuously learning new technologies.";
+    return "Currently, I don't have any work experience and I'm building my professional experience through projects, collaborations, and continuously learning new technologies.";
   }
 
   // Contact & Collaboration
