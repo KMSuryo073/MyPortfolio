@@ -829,7 +829,7 @@ body.dark-mode .theme-btn svg {
 .hamburger-right {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.5rem;
 }
 
 #hamburger-nav .theme-btn {
@@ -845,4 +845,10 @@ body.dark-mode .theme-btn svg {
 #hamburger-nav .theme-btn i {
   width: 24px;
   height: 24px;
+}
+
+#hamburger-nav {
+  padding: 0.5rem 0.75rem;
+  font-size: 0.9rem;
+  gap: 0.5rem;
 }
