@@ -139,3 +139,19 @@
     font-size: 1.25rem;
   }
 }
+
+@media screen and (max-width: 768px) {
+  .theme-btn i {
+    width: 20px;
+    height: 20px;
+  }
+
+  .hamburger-icon {
+    width: 24px;
+    height: 18px;
+  }
+
+  .hamburger-icon span {
+    height: 2px;
+  }
+}
