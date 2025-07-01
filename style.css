@@ -174,7 +174,7 @@ a:hover {
 section {
   padding-top: 4vh;
   height: 96vh;
-  margin: 0 10rem;
+  padding: 2rem 5%;
   box-sizing: border-box;
   min-height: fit-content;
 }
@@ -810,3 +810,86 @@ body.dark-mode .theme-btn svg {
   word-break: break-word;
 }
 
+/* Floating Lights */
+.floating-light {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 0;
+  animation: floatLight 10s infinite ease-in-out;
+}
+
+#light1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+#light2 {
+  top: 60%;
+  left: 70%;
+  animation-delay: 5s;
+}
+
+@keyframes floatLight {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    transform: translateY(-30px) scale(1.1);
+    filter: hue-rotate(180deg);
+  }
+}
+
+.floating-light {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 0;
+  animation: floatAround 20s infinite ease-in-out;
+  opacity: 0.8;
+}
+
+#light1 {
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+#light2 {
+  top: 60%;
+  left: 80%;
+  animation-delay: 5s;
+}
+
+@keyframes floatAround {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: translate(100vw, -50vh) scale(1.2);
+    opacity: 0.4;
+  }
+  50% {
+    transform: translate(-50vw, 50vh) scale(0.8);
+    opacity: 0.6;
+  }
+  75% {
+    transform: translate(50vw, -30vh) scale(1.1);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8;
+  }
+}
