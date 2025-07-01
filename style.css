@@ -826,10 +826,19 @@ body.dark-mode .theme-btn svg {
   font-weight: 600;
 }
 
+.hamburger-left {
+  flex-shrink: 1;
+  max-width: 60%; /* ⬅ optional: constrain width */
+}
+
 .hamburger-right {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.25rem; /* ⬅ less space between hamburger and toggle */
+}
+
+.logo {
+  margin: 0;
 }
 
 #hamburger-nav .theme-btn {
@@ -850,5 +859,5 @@ body.dark-mode .theme-btn svg {
 #hamburger-nav {
   padding: 0.5rem 0.75rem;
   font-size: 0.9rem;
-  gap: 0.5rem;
+  gap: 0;
 }
