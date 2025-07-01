@@ -793,6 +793,7 @@ body.dark-mode .theme-btn svg {
   font-size: 1rem;
   cursor: pointer;
 }
+
 .project-slide {
   min-width: 100%;
   box-sizing: border-box;
@@ -809,55 +810,3 @@ body.dark-mode .theme-btn svg {
   word-break: break-word;
 }
 
-#hamburger-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.5rem 1rem;
-  background-color: white;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-}
-
-.hamburger-left .logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-}
-
-.hamburger-left {
-  flex-shrink: 1;
-  max-width: 60%; /* ⬅ optional: constrain width */
-}
-
-.hamburger-right {
-  display: flex;
-  align-items: center;
-  gap: 0.25rem; /* ⬅ less space between hamburger and toggle */
-}
-
-.logo {
-  margin: 0;
-}
-
-#hamburger-nav .theme-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 0.3rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#hamburger-nav .theme-btn i {
-  width: 24px;
-  height: 24px;
-}
-
-#hamburger-nav {
-  padding: 0.5rem 0.75rem;
-  font-size: 0.9rem;
-  gap: 0;
-}
