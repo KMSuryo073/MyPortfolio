@@ -8,21 +8,16 @@ function toggleMenu() {
 const toggle = document.getElementById("dark-mode-toggle");
 
 toggle.addEventListener("click", () => {
-  // Toggle dark mode on body
   const isDark = document.body.classList.toggle("dark-mode");
 
-  // Save theme preference
   localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  // Remove existing icon (either <svg> or <i>)
   toggle.innerHTML = "";
 
-  // Create new <i> element with appropriate icon
   const newIcon = document.createElement("i");
   newIcon.setAttribute("data-lucide", isDark ? "sun" : "moon");
   toggle.appendChild(newIcon);
 
-  // Render Lucide icon
   lucide.createIcons();
 });
 
@@ -34,7 +29,6 @@ window.addEventListener("DOMContentLoaded", () => {
     document.body.classList.add("dark-mode");
   }
 
-  // Ensure toggle button starts with the correct icon
   toggle.innerHTML = "";
   const initialIcon = document.createElement("i");
   initialIcon.setAttribute("data-lucide", isDark ? "sun" : "moon");
@@ -165,6 +159,11 @@ toggleBtn.addEventListener("click", () => {
 
   if (chatBox.classList.contains("active")) {
     chatBox.classList.remove("hidden");
+
+    if (wasHidden && chatLog.children.length === 0) {
+      appendMessage("bot", "Hi there! 👋 I'm Kresna's assistant. You can ask me about his skills, projects, or education!");
+    }
+    
   } else {
     chatBox.classList.add("hidden");
   }
