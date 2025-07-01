@@ -129,36 +129,3 @@
   }
 }
 
-@media screen and (max-width: 768px) {
-  .logo.small-logo {
-    font-size: 1rem;
-    font-weight: 500;
-  }
-
-  .menu-links a {
-    font-size: 1.25rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .theme-btn i {
-    width: 20px;
-    height: 20px;
-  }
-
-  .hamburger-icon {
-    width: 24px;
-    height: 18px;
-  }
-
-  .hamburger-icon span {
-    height: 2px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .logo.small-logo {
-    font-size: 0.95rem;
-    white-space: nowrap;
-  }
-}
