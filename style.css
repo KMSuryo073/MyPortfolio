@@ -874,12 +874,12 @@ body.dark-mode .theme-btn svg {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 30%);
+  background: radial-gradient(circle, rgba(255,255,255,0.55) 0%, transparent 70%);
   pointer-events: none;
   mix-blend-mode: screen;
   z-index: 0;
   animation: floatAround 20s infinite ease-in-out;
-  opacity: 0.8;
+  opacity: 0.95;
 }
 
 #light1 {
