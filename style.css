@@ -810,19 +810,18 @@ body.dark-mode .theme-btn svg {
   word-break: break-word;
 }
 
-/* Floating Lights */
+/*Light*/
 .floating-light {
   position: fixed;
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 0%, transparent 70%);
   pointer-events: none;
   mix-blend-mode: screen;
   z-index: 0;
   animation: floatLight 10s infinite ease-in-out;
 }
-
 
 #light1 {
   top: 20%;
@@ -859,21 +858,7 @@ body.dark-mode .theme-btn svg {
   left: 60%;
   animation-delay: 0s;
 }
-
-floating-light {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
-  pointer-events: none;
-  mix-blend-mode: screen;
-  z-index: 0;
-  animation: floatAround 20s infinite ease-in-out;
-  opacity: 0.8;
-}
-
-@keyframes floatLight {
+@keyframes floatLight { 
   0%, 100% {
     transform: translateY(0) scale(1);
     filter: hue-rotate(0deg);
@@ -884,6 +869,19 @@ floating-light {
   }
 }
 
+.floating-light {
+  position: fixed;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 30%);
+  pointer-events: none;
+  mix-blend-mode: screen;
+  z-index: 0;
+  animation: floatAround 20s infinite ease-in-out;
+  opacity: 0.8;
+}
+
 #light1 {
   top: 20%;
   left: 10%;
@@ -918,8 +916,7 @@ floating-light {
   top: 10%;
   left: 60%;
   animation-delay: 0s;
-}
-
+} 
 
 @keyframes floatAround {
   0% {
@@ -944,6 +941,7 @@ floating-light {
   }
 }
 
+/*Contact*/
 .contact-container {
   display: flex;
   flex-direction: row;
