@@ -887,8 +887,7 @@ body.dark-mode .theme-btn svg {
   mix-blend-mode: lighten;
   z-index: 0;
   animation: floatAround 20s infinite ease-in-out;
-  opacity: 1;
-  box-shadow: 0 0 100px rgba(255, 255, 255, 0.6);
+  opacity: 0.8;
 }
 
 
