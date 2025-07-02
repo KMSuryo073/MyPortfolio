@@ -872,25 +872,6 @@ body.dark-mode .theme-btn svg {
   }
 }
 
-.floating-light {
-  position: fixed;
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    rgba(255, 255, 255, 1) 0%,
-    rgba(255, 255, 255, 0.6) 20%,
-    rgba(255, 255, 255, 0.2) 40%,
-    transparent 70%
-  );
-  pointer-events: none;
-  mix-blend-mode: lighten;
-  z-index: 0;
-  animation: floatAround 20s infinite ease-in-out;
-  opacity: 0.8;
-}
-
 #light1 {
   top: 20%;
   left: 10%;
