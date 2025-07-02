@@ -77,9 +77,6 @@ function getAIResponse(input) {
   if (input.includes("hello") || input.includes("hey") || input.includes("helo")) {
     return "Hi there! 👋 How can I assist you today?";
   }
-  if (input.includes("kresna")) {
-    return "Yes? Anything I can assist you today? You can ask me about my skills, projects, education, or contact details.";
-  }
 
   // Skills
   if (input.includes("skills") || input.includes("technologies") || input.includes("skill")) {
@@ -150,6 +147,9 @@ function getAIResponse(input) {
 
   if (input.includes("hi")) {
     return "Hi there! 👋 How can I assist you today?";
+  }
+  if (input.includes("kresna")) {
+    return "Yes? Anything I can assist you today? You can ask me about my skills, projects, education, or contact details.";
   }
 
   // Catch-all
